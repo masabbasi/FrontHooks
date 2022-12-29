@@ -1,0 +1,240 @@
+:root {
+  /*------------------------------
+Colors Variables
+------------------------------*/
+  --text-color: #374151;
+  --pri-color: #5b20b6;
+  --sec-colors: #f9fafb;
+  --menu-color: rgb(55 65 81);
+  --lightColor: white;
+  /*------------------------------
+Fonts Variables
+------------------------------*/
+  --font-reg: "Poppins Regular", Arial, Helvetica, sans-serif;
+  --font-med: "Poppins Medium", Arial, Helvetica, sans-serif;
+  --font-sb: "Poppins SemiBold", Arial, Helvetica, sans-serif;
+  --font-bold: "Poppins Bold", Arial, Helvetica, sans-serif;
+  --font-black: "Poppins Black", Arial, Helvetica, sans-serif;
+}
+
+:root.dark-theme {
+  --text-color: #93a2b7;
+  --pri-color: #5b20b6;
+  --sec-colors: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  direction: rtl;
+}
+
+body {
+	width: 100%;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  overflow-x: hidden;
+	background-color: var(--sec-colors);
+}
+
+.container {
+  /* width: 100%; */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*------------------------------
+Reset - Start
+------------------------------*/
+a {
+  text-decoration: none;
+}
+/*------------------------------
+Reset - End
+------------------------------*/
+
+/*------------------------------
+Helper Classes - Start
+------------------------------*/
+
+.h-full {
+  height: 100%;
+}
+/*------------------------------
+Helper Classes - End
+------------------------------*/
+
+/*------------------------------
+Components - Start
+------------------------------*/
+.btn {
+  width: 18rem;
+  height: 5.2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  border: none;
+  color: #fff;
+  background-color: var(--pri-color);
+}
+/*------------------------------
+Components - End
+------------------------------*/
+
+/*------------------------------
+					App - Start
+------------------------------*/
+.menu {
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0.3rem 2rem 3rem;
+  border-bottom: 1px solid #93a2b770;
+  background-color: var(--lightColor);
+}
+
+.menu__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu__right--logo {
+  margin-left: 3.5rem;
+}
+
+.menu__right--logo img {
+  width: 2.8rem;
+}
+
+.menu__right__items ul {
+  display: flex;
+  align-items: center;
+}
+
+.menu__right__items ul li {
+  padding: 1rem 2rem;
+}
+
+.menu__right__items ul li a {
+  color: var(--menu-color);
+  font-weight: 500;
+}
+
+.menu__right__items ul li a:hover {
+  color: var(--pri-color);
+}
+
+.menu__left {
+  display: flex;
+  align-items: center;
+}
+
+.light-mode,
+.basket,
+.login {
+  width: 2.5rem;
+  padding: 1rem;
+  color: var(--pri-color);
+}
+
+.menu__left a {
+  color: var(--pri-color);
+  display: block;
+}
+
+.menu__left a:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light-mode:hover,
+.basket:hover,
+.login:hover {
+  border-radius: 50%;
+  background-color: var(--sec-colors);
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7rem 3rem;
+}
+
+.header__right {
+}
+
+.header__right img {
+  width: 62rem;
+}
+
+.header__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__left h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.header__left p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin: 2rem 0;
+}
+
+.header__left a {
+  color: rgb(29 78 216);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header__left a span:nth-child(1) {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--pri-color);
+}
+
+.property {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0 0 0;
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem;
+	margin-left: 1.5rem;
+	background-color: var(--lightColor);
+	border-radius: 1rem;
+}
+
+.box h3 {
+	margin: 1rem 0;
+	font-weight: 800;
+}
+
+.box p{
+	font-size: 1.5rem;
+	max-width: 16rem;
+}
+
+/*------------------------------
+Header - Start
+------------------------------*/
