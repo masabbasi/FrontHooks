@@ -109,6 +109,7 @@
 
   .front-end__left {
     width: 90%;
+		margin-bottom: 5rem;
   }
 
   .statistics div:first-child h3 {
