@@ -429,6 +429,11 @@ Components - End
   fill: var(--pri-color);
 }
 
+.course__show {
+	display: flex;
+	align-items: center;
+}
+
 .course__show:hover .left-arrow {
   margin-right: 2rem;
 }
