@@ -239,7 +239,7 @@ Components - End
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10rem 1rem 1rem 1rem;
+  padding: 10rem 1.5rem 1rem;
 }
 
 .header__right {
@@ -308,6 +308,7 @@ Components - End
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 2rem 0 0 0;
+	margin: 0 -1rem;
 }
 
 .box {
@@ -355,7 +356,7 @@ Components - End
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 2rem 0 0 0;
-  margin: 0 -1.5rem 6rem;
+  margin: 0 -1rem 6rem;
 }
 
 .course {
@@ -491,8 +492,7 @@ Components - End
 .statistics {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  margin: 4rem 0 6rem 0;
-  padding: 0 2rem;
+  margin: 4rem -1rem 6rem;
 }
 
 .statistics div {
@@ -529,7 +529,7 @@ Components - End
 }
 
 .footer {
-  padding: 3rem;
+  padding: 3rem -1rem;
   background-color: #f3f4f6;
 }
 
@@ -537,6 +537,7 @@ Components - End
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-row: 1fr 1fr;
+	margin: 1rem;
 }
 
 .footer .top div {
