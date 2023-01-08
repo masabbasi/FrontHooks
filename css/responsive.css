@@ -172,6 +172,14 @@
 }
 
 @media screen and (max-width: 576px) {
+	.header__left h1 {
+		font-size: 2rem;
+	}
+
+	.header__left p {
+		font-size: 1.8rem;
+	}
+
   .property {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -222,6 +230,18 @@
 }
 
 @media screen and (max-width: 420px) {
+	.header__left h1 {
+		font-size: 1.8rem;
+	}
+
+	.header__left p {
+		font-size: 1.4rem;
+	}
+
+	.header__left a {
+		font-size: 1.6rem;
+	}
+
   .property {
     grid-template-columns: repeat(1, 1fr);
   }
