@@ -99,12 +99,14 @@ Components - End
 .menu {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
   border-bottom: 1px solid #93a2b770;
   background-color: var(--lightColor);
   position: fixed;
+  top: 0;
+  right: 0;
   z-index: 2;
 }
 
@@ -115,11 +117,15 @@ Components - End
 }
 
 .menu__right--logo {
+	width: 2.5rem;
   margin-left: 3.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .menu__right--logo img {
-  width: 2.8rem;
+  width: 100%;
 }
 
 .hamburger__menu {
@@ -129,9 +135,7 @@ Components - End
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin-right: 1rem;
   margin-left: 1rem;
-  border: 1px solid red;
 }
 
 .menu__line {
@@ -193,7 +197,6 @@ Components - End
 .menu__left {
   display: flex;
   align-items: center;
-  margin-left: 1.5rem;
 }
 
 .light-mode,
@@ -205,13 +208,13 @@ Components - End
 }
 
 .login-text {
-	display: block;
-    margin-left: 1rem;
+  display: block;
+  margin-left: 1rem;
 }
 
 .menu__left a {
+	display: flex;
   color: var(--pri-color);
-  display: block;
 }
 
 .menu__left a:nth-child(3) {
@@ -231,12 +234,14 @@ Components - End
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 8rem 1rem 1rem;
+  padding: 10rem 1rem 1rem 1rem;
 }
 
 .header__right {
   width: 50%;
-  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__right img {
@@ -245,7 +250,6 @@ Components - End
 
 .header__left {
   width: 50%;
-  padding-right: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -302,7 +306,7 @@ Components - End
 }
 
 .box {
-	text-align: center;
+  text-align: center;
   height: 20rem;
   padding: 2rem;
   margin: 1rem;
@@ -313,12 +317,13 @@ Components - End
 .box h3 {
   margin: 1rem 0;
   font-weight: 800;
-	text-align: center;
+  text-align: center;
 }
 
 .box p {
-  font-size: 1.5rem;
-	text-align: justify;
+  font-size: 1.6rem;
+	font-weight: 400;
+  text-align: justify;
 }
 
 .course__title {
@@ -326,7 +331,7 @@ Components - End
   position: relative;
   text-align: center;
   font-weight: bold;
-  margin: 6rem 0 0 3rem;
+  margin: 3rem 0;
 }
 
 .course__title::before {
@@ -340,8 +345,8 @@ Components - End
 }
 
 .courses {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 2rem 0 0 0;
   margin-bottom: 6rem;
 }
@@ -358,7 +363,7 @@ Components - End
 
 .course__img {
   width: 100%;
-  height: 30rem;
+  height: 26rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -374,7 +379,7 @@ Components - End
 }
 
 .course h1 {
-	height: 6rem;
+  height: 6rem;
 }
 
 .course h1 a {
@@ -435,18 +440,17 @@ Components - End
 .course__buy .btn {
   width: 15rem;
   height: 4.5rem;
-	margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .front-end {
   display: flex;
-  padding-left: 2rem;
 }
 
 .front-end__right {
   width: 35%;
   display: flex;
-	justify-content: center;
+  justify-content: center;
   align-items: center;
 }
 
@@ -461,6 +465,7 @@ Components - End
 }
 
 .front-end__left h1 {
+  text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
@@ -472,15 +477,17 @@ Components - End
 }
 
 .statistics {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
   margin: 4rem 0 6rem 0;
   padding: 0 2rem;
 }
 
+.statistics div {
+	margin: 1rem;
+}
+
 .statistics div:not(:first-child) {
-  width: 18%;
   height: 7rem;
   display: flex;
   flex-direction: column;
@@ -500,7 +507,6 @@ Components - End
 }
 
 .statistics div:first-child {
-  width: 25%;
   display: flex;
   flex-direction: column;
 }
@@ -516,13 +522,14 @@ Components - End
 }
 
 .footer .top {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-row: 1fr 1fr;
 }
 
 .footer .top div {
-	margin: 1rem;
-	justify-self: center;
+  margin: 1rem;
+  justify-self: center;
 }
 
 .footer .top div:first-child {
@@ -533,7 +540,7 @@ Components - End
 }
 
 .footer .top div:last-child {
-	text-align: center;
+  text-align: center;
 }
 
 .footer .top div h3:first-child {
@@ -547,11 +554,12 @@ Components - End
 }
 
 .footer .top div span {
-  display: inline-block;
+  display: block;
   margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: bold;
   color: #6b6d6e;
+	text-align: center;
 }
 
 .footer .top div p {
@@ -568,7 +576,7 @@ Components - End
 }
 
 .footer .top ul {
-	padding-right: 1rem;
+  padding-right: 1rem;
 }
 
 .footer .top ul li {
@@ -597,12 +605,18 @@ Components - End
 }
 
 .bottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .social {
   width: 100%;
   height: 8rem;
   display: flex;
+	justify-content: center;
+	align-items: center;
   margin-top: 2rem;
 }
 
@@ -636,11 +650,17 @@ Components - End
   fill: #ff0000;
 }
 
+.social div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 2rem;
+}
+
 .social a {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   display: inline-block;
-  margin-left: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -653,7 +673,8 @@ Components - End
 }
 
 .bottom p {
-  margin: 2rem 0;
+	text-align: center;
+  margin: 1.4rem 0;
   color: rgb(136, 130, 130);
 }
 /*------------------------------
