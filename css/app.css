@@ -28,6 +28,7 @@ html {
   font-size: 62.5%;
   direction: rtl;
 }
+	
 
 body {
   width: 100%;
@@ -107,7 +108,9 @@ Components - End
   position: fixed;
   top: 0;
   right: 0;
+	left: 0;
   z-index: 2;
+	box-sizing: border-box;
 }
 
 .menu__right {
@@ -197,6 +200,7 @@ Components - End
 .menu__left {
   display: flex;
   align-items: center;
+	/* padding-left: 1.5rem; */
 }
 
 .light-mode,
