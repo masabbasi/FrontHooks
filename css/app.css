@@ -82,6 +82,7 @@ Components - Start
   border-radius: 1rem;
   border: none;
   color: #fff;
+	cursor: pointer;
   background-image: linear-gradient(
     333deg,
     rgb(43, 1, 121) 0%,

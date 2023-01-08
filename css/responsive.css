@@ -64,6 +64,9 @@
 }
 
 @media screen and (max-width: 768px) {
+	* {
+		cursor: none;
+	}
   .menu__right__items {
     display: none;
   }
