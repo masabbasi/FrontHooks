@@ -130,7 +130,7 @@
   }
 
   .mobile__menu--show ul li:active{
-    background-color: #e9e9e9;
+    background-color: var(--lightGray);
   }
 
   .menu__right--logo {

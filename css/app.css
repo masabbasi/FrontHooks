@@ -4,23 +4,44 @@ Colors Variables
 ------------------------------*/
   --text-color: #374151;
   --pri-color: #5b20b6;
+  --pri-change: #5b20b6;
   --sec-colors: #f9fafb;
+	--box-color:white;
   --menu-color: rgb(55 65 81);
-  --lightColor: white;
-  /*------------------------------
-Fonts Variables
-------------------------------*/
-  --font-reg: "Poppins Regular", Arial, Helvetica, sans-serif;
-  --font-med: "Poppins Medium", Arial, Helvetica, sans-serif;
-  --font-sb: "Poppins SemiBold", Arial, Helvetica, sans-serif;
-  --font-bold: "Poppins Bold", Arial, Helvetica, sans-serif;
-  --font-black: "Poppins Black", Arial, Helvetica, sans-serif;
+  --white: white;
+  --black: #0f172a;
+  --blue: rgb(29 78 216);
+  --lightGray: #e9e9e9;
+  --darkGray: #93a2b7;
+	--footer-color:#e9e9e9;
 }
 
 :root.dark-theme {
-  --text-color: #93a2b7;
+  --text-color: #e9e9e9;
   --pri-color: #5b20b6;
+  --pri-change: #e9e9e9;
   --sec-colors: #0f172a;
+	--box-color:rgb(30 41 59);
+  --menu-color: rgb(55 65 81);
+  --white: #0f172a;
+  --black: white;
+  --blue: rgb(56 189 248);
+  --lightGray: #e9e9e9;
+  --darkGray: #93a2b7;
+	--footer-color:rgb(30 41 59);
+}
+
+:root.dark-theme .light-mode,
+:root.dark-theme .basket,
+:root.dark-theme .login,
+:root.dark-theme .menu__left a {
+  color: var(--lightGray);
+}
+
+:root.dark-theme .menu {
+  border-bottom: none;
+  box-shadow: 0px 0px 22px -8px var(--lightGray);
+  /* box-shadow: inset 0px -10px 23px -23px var(--lightGray) */
 }
 
 html {
@@ -28,7 +49,6 @@ html {
   font-size: 62.5%;
   direction: rtl;
 }
-	
 
 body {
   width: 100%;
@@ -37,7 +57,7 @@ body {
   overflow-x: hidden;
   background-color: var(--sec-colors);
   font-family: vazir;
-	user-select: none;
+  user-select: none;
 }
 
 .container {
@@ -56,7 +76,7 @@ a {
 }
 
 strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 /*------------------------------
 Reset - End
@@ -86,8 +106,8 @@ Components - Start
   align-items: center;
   border-radius: 1rem;
   border: none;
-  color: #fff;
-	cursor: pointer;
+  color: white;
+  cursor: pointer;
   background-image: linear-gradient(
     333deg,
     rgb(43, 1, 121) 0%,
@@ -109,14 +129,14 @@ Components - End
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  border-bottom: 1px solid #93a2b770;
-  background-color: var(--lightColor);
+  border-bottom: 1px solid var(--lightGray);
+  background-color: var(--white);
   position: fixed;
   top: 0;
   right: 0;
-	left: 0;
+  left: 0;
   z-index: 2;
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .menu__right {
@@ -126,11 +146,11 @@ Components - End
 }
 
 .menu__right--logo {
-	width: 2.5rem;
+  width: 2.5rem;
   margin-left: 3.5rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu__right--logo img {
@@ -153,8 +173,8 @@ Components - End
   width: 3rem;
   height: 0.4rem;
   border-radius: 1rem;
-  background-color: var(--pri-color);
-	transition: all 200ms ease-in;
+  background-color: var(--pri-change);
+  transition: all 200ms ease-in;
 }
 
 .menu__line::before,
@@ -165,8 +185,8 @@ Components - End
   width: 3rem;
   height: 0.4rem;
   border-radius: 1rem;
-  background-color: var(--pri-color);
-	transition: all 200ms ease-in;
+  background-color: var(--pri-change);
+  transition: all 200ms ease-in;
 }
 
 .hamburger__menu--open .menu__line {
@@ -196,7 +216,7 @@ Components - End
 }
 
 .menu__right__items ul li a {
-  color: var(--menu-color);
+  color: var(--text-color);
   font-size: 1.4rem;
   font-weight: 500;
 }
@@ -208,7 +228,6 @@ Components - End
 .menu__left {
   display: flex;
   align-items: center;
-	/* padding-left: 1.5rem; */
 }
 
 .light-mode,
@@ -225,7 +244,7 @@ Components - End
 }
 
 .menu__left a {
-	display: flex;
+  display: flex;
   color: var(--pri-color);
 }
 
@@ -247,7 +266,7 @@ Components - End
   justify-content: space-around;
   align-items: center;
   padding: 15rem 1.5rem 1rem;
-	margin-bottom: 12rem;
+  margin-bottom: 12rem;
 }
 
 .header__right {
@@ -272,7 +291,7 @@ Components - End
 .header__left h1 {
   font-size: 3rem;
   font-weight: bold;
-  color: #0f172a;
+  color: var(--black);
 }
 
 .header__left p {
@@ -289,7 +308,7 @@ Components - End
 }
 
 .circle {
-  background-color: var(--pri-color);
+  background-color: var(--pri-change);
   border-radius: 50%;
   animation: circleAni 1s infinite;
   height: 1rem;
@@ -300,7 +319,7 @@ Components - End
 
 @keyframes circleAni {
   0% {
-    box-shadow: 0 0 0 0 var(--pri-color);
+    box-shadow: 0 0 0 0 var(--pri-change);
   }
 
   70% {
@@ -316,7 +335,7 @@ Components - End
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 2rem 0 0 0;
-	margin: 0 -1.5rem;
+  margin: 0 -1.5rem;
 }
 
 .box {
@@ -324,25 +343,28 @@ Components - End
   height: 20rem;
   padding: 2rem;
   margin: 1.5rem;
-  background-color: var(--lightColor);
+  background-color: var(--box-color);
   border-radius: 1rem;
 }
 
 .box h3 {
-	height:4rem;
+	color: var(--black);
+  height: 4rem;
   margin: 1rem 0;
   font-weight: 800;
   text-align: center;
 }
 
 .box p {
+	color: var(--text-color);
   font-size: 1.5rem;
-	line-height: 1.3;
-	font-weight: 400;
+  line-height: 1.3;
+  font-weight: 400;
   text-align: center;
 }
 
 .course__title {
+	color: var(--text-color);
   font-size: 2.6rem;
   position: relative;
   text-align: center;
@@ -356,7 +378,7 @@ Components - End
   height: 1.8rem;
   position: absolute;
   top: 64%;
-  background-color: rgb(233 213 255);
+  background-color: var(--darkGray);
   z-index: -1;
 }
 
@@ -371,7 +393,7 @@ Components - End
   height: 55rem;
   border-radius: 0.5rem;
   margin: 1.5rem;
-  background-color: var(--lightColor);
+  background-color: var(--box-color);
   border-radius: 1rem;
   box-shadow: 0px 34px 60px -60px rgba(107, 101, 107, 1);
   overflow: hidden;
@@ -402,7 +424,7 @@ Components - End
   font-size: 2rem;
   margin-bottom: 1.5rem;
   font-weight: 500;
-  color: black;
+	color: var(--text-color);
 }
 
 .time {
@@ -413,11 +435,11 @@ Components - End
 }
 
 .time span:first-child {
-	display: flex;
+  display: flex;
 }
 
 .time span:first-child svg {
-  fill: var(--pri-color);
+  fill: var(--pri-change);
 }
 
 .time span:last-child {
@@ -440,12 +462,13 @@ Components - End
 }
 
 .left-arrow g {
-  fill: var(--pri-color);
+  fill: var(--pri-change);
 }
 
 .course__show {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+	color: var(--blue);
 }
 
 .course__show:hover .left-arrow {
@@ -460,6 +483,7 @@ Components - End
   display: flex;
   justify-content: space-between;
   align-items: center;
+	color: var(--text-color);
 }
 
 .course__buy .btn {
@@ -470,7 +494,7 @@ Components - End
 
 .front-end {
   display: flex;
-	margin-bottom: 6rem;
+  margin-bottom: 6rem;
 }
 
 .front-end__right {
@@ -485,12 +509,14 @@ Components - End
 }
 
 .front-end__left {
+	color:var(--darkGray);
   width: 65%;
   line-height: 2;
   text-align: justify;
 }
 
 .front-end__left h1 {
+	color:var(--text-color);
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
@@ -498,25 +524,26 @@ Components - End
 }
 
 .front-end__left a {
-  color: rgb(29 78 216);
+  color: var(--blue);
   font-weight: bold;
 }
 
 .statistics {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: 4rem -1rem 6rem;
 }
 
 .statistics div {
-	margin: 1rem;
+  margin: 1rem;
+	border-radius: 0.5rem;
 }
 
 .statistics div:not(:first-child) {
   height: 7rem;
   display: flex;
   flex-direction: column;
-  background-color: var(--lightColor);
+  background-color: var(--box-color);
   padding: 1rem;
   text-align: center;
   margin-right: 1rem;
@@ -527,8 +554,12 @@ Components - End
   font-weight: bold;
 }
 
+.statistics div:not(:first-child) span:first-child {
+  color: var(--pri-change);
+}
+
 .statistics div:not(:first-child) span:last-child {
-  color: var(--pri-color);
+  color: var(--pri-change);
 }
 
 .statistics div:first-child {
@@ -537,20 +568,25 @@ Components - End
 }
 
 .statistics div:first-child h3 {
+	color:var(--darkGray);
   font-size: 2.5rem;
   font-weight: bold;
 }
 
+.statistics div:first-child span {
+	color:var(--darkGray);
+}
+
 .footer {
   padding: 3rem -1rem;
-  background-color: #f3f4f6;
+  background-color: var(--footer-color);
 }
 
 .footer .top {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-row: 1fr 1fr;
-	margin: 1rem;
+  grid-row: 1fr 1fr;
+  margin: 1rem;
 }
 
 .footer .top div {
@@ -570,7 +606,7 @@ Components - End
 }
 
 .footer .top div h3:first-child {
-  color: rgb(29 78 216);
+  color: var(--blue);
   font-weight: 500;
   margin-bottom: 2rem;
 }
@@ -584,21 +620,21 @@ Components - End
   margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: bold;
-  color: #6b6d6e;
-	text-align: center;
+  color: var(--darkGray);
+  text-align: center;
 }
 
 .footer .top div p {
   text-align: justify;
-  color: rgb(136, 130, 130);
+  color: var(--darkGray);
 }
 
 .footer .top div p a {
-  color: rgb(136, 130, 130);
+  color: var(--darkGray);
 }
 
 .a__social {
-  color: rgb(29 78 216) !important;
+  color: var(--blue) !important;
 }
 
 .footer .top ul {
@@ -611,7 +647,7 @@ Components - End
 }
 
 .footer .top ul li a {
-  color: #6b6d6e;
+  color: var(--darkGray);
 }
 
 .footer .top ul li a:hover {
@@ -627,29 +663,29 @@ Components - End
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: #6b6d6e;
+  background-color: var(--darkGray);
 }
 
 .bottom {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .social {
   width: 100%;
   height: 8rem;
   display: flex;
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 
 .social svg {
   width: 3rem;
   height: 3rem;
-  fill: rgb(136, 130, 130);
+  fill: var(--darkGray);
 }
 
 .instagram:hover svg {
@@ -677,10 +713,10 @@ Components - End
 }
 
 .social div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
 }
 
 .social a {
@@ -694,26 +730,26 @@ Components - End
 }
 
 .social a:hover {
-  background-color: rgba(187, 184, 184, 0.671);
+  background-color: var(--text-color);
   border-radius: 50%;
 }
 
 .bottom p {
-	text-align: center;
+  text-align: center;
   margin: 1.4rem 0;
-  color: rgb(136, 130, 130);
+  color: var(--darkGray);
 }
 
 .cover {
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.5);
-position: fixed;
-top: 0;
-right: 0;
-z-index: -1;
-opacity: 0;
-transition: all 200ms ease-in;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: all 200ms ease-in;
 }
 /*------------------------------
 Header - Start
