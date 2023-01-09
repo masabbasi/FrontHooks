@@ -28,6 +28,7 @@ themeBtn.addEventListener("click", function () {
   document.documentElement.classList.toggle("dark-theme");
   if (document.documentElement.classList.contains("dark-theme")) {
     localStorage.setItem("theme", "dark-theme");
+    logo.src = "./files/favicon.png";
     this.innerHTML = lightThemeIcon;
   } else {
     localStorage.setItem("theme", "light-theme");
