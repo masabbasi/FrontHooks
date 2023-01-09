@@ -100,6 +100,14 @@
     width: 100%;
   }
 
+	.property div:nth-of-type(4) {
+
+	}
+
+	.property div:nth-of-type(5) {
+		
+	}
+
   .front-end {
     flex-direction: column-reverse;
     justify-content: center;
