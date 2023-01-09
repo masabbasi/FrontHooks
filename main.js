@@ -36,5 +36,3 @@ themeBtn.addEventListener("click", function () {
     this.innerHTML = darkThemeIcon;
   }
 });
-
-console.log(logo);
