@@ -145,10 +145,6 @@
     display: flex;
   }
 
-  .light-mode {
-    display: none;
-  }
-
   .header {
     flex-direction: column;
     margin-bottom: 4rem;
