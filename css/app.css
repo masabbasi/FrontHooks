@@ -555,11 +555,11 @@ Components - End
 }
 
 .statistics div:not(:first-child) span:first-child {
-  color: var(--pri-change);
+  color: var(--black);
 }
 
 .statistics div:not(:first-child) span:last-child {
-  color: var(--pri-change);
+  color: var(--text-color);
 }
 
 .statistics div:first-child {
@@ -568,7 +568,7 @@ Components - End
 }
 
 .statistics div:first-child h3 {
-	color:var(--darkGray);
+	color:var(--text-color);
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -595,9 +595,6 @@ Components - End
 }
 
 .footer .top div:first-child {
-  /* width: 35%;
-  margin-right: 0;
-  margin-left: 1rem; */
   font-size: 1.5rem;
 }
 
@@ -609,6 +606,7 @@ Components - End
   color: var(--blue);
   font-weight: 500;
   margin-bottom: 2rem;
+	text-align: center;
 }
 
 .footer .top div span:last-child {
