@@ -228,6 +228,10 @@
 }
 
 @media screen and (max-width: 576px) {
+	.mobile__menu--show {
+    width: 70%;
+}
+
   .header__left h1 {
     font-size: 2rem;
   }
