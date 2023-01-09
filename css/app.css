@@ -53,6 +53,10 @@ Reset - Start
 a {
   text-decoration: none;
 }
+
+strong {
+	font-weight: bold;
+}
 /*------------------------------
 Reset - End
 ------------------------------*/
