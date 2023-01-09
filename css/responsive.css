@@ -118,6 +118,12 @@
   }
 
   .mobile__menu--show ul li {
+		width: 100%;
+		padding: 0;
+	}
+
+  .mobile__menu--show ul li a {
+		display: block;
     width: 100%;
     text-align: center;
     padding: 2rem 0;
