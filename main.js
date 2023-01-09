@@ -4,6 +4,6 @@ const cover = document.querySelector(".cover")
 
 hamburgerMenu.addEventListener ("click",function(){
 	hamburgerMenu.classList.toggle("hamburger__menu--open");
-	menu.classList.toggle("mobile__menu--show")
-	cover.classList.toggle("cover--show")
+	menu.classList.toggle("mobile__menu--show");
+	cover.classList.toggle("cover--show");
 })
